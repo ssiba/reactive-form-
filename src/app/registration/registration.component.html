@@ -1,0 +1,109 @@
+<!-- <div class="d-flex justify-content-center">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Number:</label>
+        <input type="number" formControlName="number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.number.errors }" />
+        <div *ngIf="submitted && f.number.errors" class="invalid-feedback">
+            <div *ngIf="f.number.errors.required">Email is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success">Register</button>
+    </div>
+    </form>
+</div> -->
+<!-- <pre>{{registerForm.value|json}}</pre> -->
+<!-- main app container -->
+
+<!-- <div class="jumbotron bg-dark text-white"> -->
+        <div class="d-flex justify-content-md-end mt-5">
+                <button class="btn btn-outline-primary" routerLink="/emp-list">
+                  Employee Details
+                </button>
+              </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Registration Form</h2>
+                <br>
+                <form [formGroup]="registerForm">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="text" formControlName="MobileNumber" maxlength="10" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.MobileNumber.errors }" />
+                        <div *ngIf="submitted && f.MobileNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.MobileNumber.errors.required">MobileNumber is required</div>
+                            <div *ngIf="f.MobileNumber.errors.maxlength">MobileNumber should be 10 digits</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 8 characters</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                        <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                            <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                            <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" (click)="saveReg()" class="btn btn-primary">Register</button>
+                        <button (click)="clearForm()" class="btn btn-warning">Reset</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+   
+
+<!-- </div> -->

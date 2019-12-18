@@ -1,0 +1,46 @@
+<div class="container">
+    <!-- <div class="d-flex justify-content-center">
+      <h1 class="text-mute">Employee Information</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-4" *ngFor="let data of empData">
+        <div *ngIf="isEmpData" class="empData">
+          <label> <b>Name:</b> <span class="ml-1">{{data.Name}}</span></label> <br>
+          <label> <b>Email:</b> <span class="ml-1">{{data.Email}}</span></label> <br>
+          <label> <b>Number:</b> <span class="ml-1">{{data.Number}}</span></label> <br>
+          <label> <b>Branch:</b> <span class="ml-1">{{data.Branch}}</span></label> <br>
+          <label> <b>Designation:</b> <span class="ml-1">{{data.Designation}}</span></label> <br>
+          <label> <b>City:</b> <span class="ml-1">{{data.City}}</span></label> <br>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!isEmpData" class="mt-5">
+      <h1 class="d-flex justify-content-center">
+        No Record Founddfdasdad
+      </h1>
+    </div>
+  </div><div class="container"> -->
+  <div class="d-flex justify-content-center mt-5">
+    <h1 class="text-mute">Employee Information</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let data of empData">
+      <div *ngIf="isEmpData" class="empData">
+        <label> <b>First Name:</b> <span class="ml-1">{{data.firstName}}</span></label> <br>
+        <label> <b>Last Name::</b> <span class="ml-1">{{data.lastName}}</span></label> <br>
+        <label> <b>Mobile Number:</b> <span class="ml-1">{{data.MobileNumber}}</span></label> <br>
+        <label> <b>Email:</b> <span class="ml-1">{{data.email}}</span></label> <br>
+
+      </div>
+    </div>
+
+  </div>
+  <div *ngIf="!isEmpData" class="mt-5">
+    <h1 class="d-flex justify-content-center">
+      No Record Found
+    </h1>
+  </div>
+  <div class="text-center">
+      <button routerLink="/registration" class="btn btn-info">Back</button>
+    </div>
+</div>
