@@ -8,6 +8,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EmpListComponent } from './emp-list/emp-list.component';
+import { CurdComponent  } from './Curd/curd.component';
+
 
 import { DataService } from './service/data.service';
 
@@ -17,14 +19,15 @@ import { DataService } from './service/data.service';
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    EmpListComponent
+    EmpListComponent,
+    CurdComponent,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     DataService
