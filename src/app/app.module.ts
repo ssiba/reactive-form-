@@ -9,10 +9,11 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { CurdComponent  } from './Curd/curd.component';
-
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 import { DataService } from './service/data.service';
-
+import { CalendarComponent } from './Calendar/calendar/calendar.component';
+// import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DataService } from './service/data.service';
     LoginComponent,
     EmpListComponent,
     CurdComponent,
+    CalendarComponent,
   ],
   imports: [
     HttpClientModule,
@@ -28,6 +30,7 @@ import { DataService } from './service/data.service';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    FullCalendarModule
   ],
   providers: [
     DataService

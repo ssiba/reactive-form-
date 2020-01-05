@@ -4,6 +4,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { CurdComponent } from './Curd/curd.component';
+import { CalendarComponent } from './Calendar/calendar/calendar.component';
 
 
 
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent },
   {path: 'emp-list', component: EmpListComponent },
   {path: 'curd', component: CurdComponent },
+  {path: 'calendar', component: CalendarComponent },
+
 
 
   
