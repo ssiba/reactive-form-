@@ -27,7 +27,7 @@ export class CurdComponent implements OnInit {
     this.model = {};
   }
   deleteEmployee(i) {
-    this.employees.splice(i);
+    this.employees.splice(i,1);
     console.log(i);
   }
   myValue;
@@ -37,14 +37,20 @@ export class CurdComponent implements OnInit {
     this.myValue = editEmployeeInfo;
   }
   updateEmployee() {
+    if (this.model2.name&&this.model2.position) {
     let editEmployeeInfo = this.myValue;
-    for(let i = 0; i < this.employees.length; i++) {
-      if(i == editEmployeeInfo) {
-        this.employees[i] = this.model2;
-        this.model2 = {};
+
+      for(let i = 0; i < this.employees.length; i++) {
+        if(i == editEmployeeInfo) {
+          this.employees[i] = this.model2;
+          this.model2 = {};
+        }
       }
+    }else{
+      alert("please fill all the data ")
+    }    
     }
-  }
+  
 
   addNewEmployeeBtn() {
     if(this.newEmployeeClicked){

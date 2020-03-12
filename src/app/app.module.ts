@@ -10,6 +10,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { CurdComponent  } from './Curd/curd.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { NgxMaskModule } from 'ngx-mask';
 
 import { DataService } from './service/data.service';
 import { CalendarComponent } from './Calendar/calendar/calendar.component';
@@ -30,6 +31,8 @@ import { CalendarComponent } from './Calendar/calendar/calendar.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    NgxMaskModule.forRoot(),
+
     FullCalendarModule
   ],
   providers: [
